@@ -1,9 +1,9 @@
 #include <iostream>
-#include <queue>
 using namespace std;
 
 class node
 {
+
 public:
     int data;
     node *left;
@@ -18,23 +18,25 @@ public:
     }
 };
 
-bool search(node *root, int key)
+bool search(node *root, int target)
 {
+
     if (root == NULL)
     {
         return false;
     }
-    if (root->data == key)
+    if (root->data == target)
     {
         return true;
     }
-    if (key < root->data)
+    if (root->data > target)
     {
-        return search(root->left, key);
+
+        return search(root->left, target);
     }
-    else
+    if (root->data < target)
     {
-        return search(root->right, key);
+        return search(root->right, target);
     }
 }
 
@@ -51,14 +53,13 @@ int main()
     root->right->left = new node(60);
     root->left->right = new node(80);
 
-    if (search(root, 60))
+    if (search(root, 30))
     {
-        cout << "element found";
+        cout << "element found" << endl;
     }
     else
     {
-        cout << "element not found";
+        cout << "element not found" << endl;
     }
-
     return 0;
 }
