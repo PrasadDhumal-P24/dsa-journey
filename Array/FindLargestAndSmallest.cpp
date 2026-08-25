@@ -8,26 +8,26 @@ using namespace std;
 int main()
 {
 
-    int arr[] = {2, 4, 6, 7, 3, 9};
-    int n = 6;
-    int maxvalue = 0;
-    int minvalue = 0;
+    int arr[] = {1, 2, 3, 4, 5};
+    int n = 5;
+    int largest = arr[0];
+    int smallest = arr[0];
 
-    for (int i = 0; i < n; i++)
+    for (int i = 1; i < n; i++)
     {
-        if (arr[i] > maxvalue)
+
+        if (arr[i] > largest)
         {
-            maxvalue = arr[i];
+            largest = arr[i];
         }
-        if (arr[i] < minvalue)
+        if (arr[i] < smallest)
         {
-            minvalue = arr[i];
+            smallest = arr[i];
         }
     }
-    
-    cout << "largest " << maxvalue << endl;
-    cout << "smallest " << minvalue << endl;
-    
-    return 0;
 
+    cout << "largest = " << largest << endl;
+    cout << "smallest = " << smallest << endl;
+
+    return 0;
 }
