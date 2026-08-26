@@ -8,27 +8,31 @@ using namespace std;
 int main()
 {
 
-    int arr[] = {10, 3, 20, 40};
-    int n = 4;
-    int target = 13;
+    int arr[] = {3, 5, 7, 8, 4};
+    int n = 5;
+    int target = 8;
 
     bool found = false;
 
     for (int i = 0; i < n; i++)
     {
-        for (int j = i + 1; i < n; i++)
+
+        for (int j = i + 1; j < n; j++)
         {
+
             if (arr[i] + arr[j] == target)
             {
+
+                cout << arr[i] << " + " << arr[j] << " = " << target << endl;
                 found = true;
-                cout << arr[i] << "+" << arr[j] << "=" << target << endl;
                 break;
-            }
-            if (!found)
-            {
-                cout << "sum are not found" << endl;
             }
         }
     }
+    if (!found)
+    {
+        cout << "two sum not found" << endl;
+    }
+
     return 0;
 }
