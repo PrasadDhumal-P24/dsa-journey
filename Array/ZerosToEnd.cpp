@@ -8,23 +8,22 @@ using namespace std;
 int main()
 {
 
-    int arr[] = {5, 0, 6, 0, 77, 89, 0, 99};
-    int n = 8;
-    int pos = 0;
+    int arr[] = {1, 0, 33, 0, 77, 88, 0};
+    int n = 7;
+    int j = 0;
 
     for (int i = 0; i < n; i++)
     {
 
         if (arr[i] != 0)
         {
-            swap(arr[i], arr[pos]);
-            pos++;
+            swap(arr[i], arr[j]);
+            j++;
         }
     }
-
-    for (int pos = 0; pos < n; pos++)
+    for (int j = 0; j < n; j++)
     {
-        cout << arr[pos] << " " << endl;
+        cout << arr[j] << " " << endl;
     }
     return 0;
 }

@@ -10,19 +10,20 @@ int main()
 
     int arr[] = {1, 2, 3, 4, 5};
     int n = 5;
-    int st = 0, end = n - 1;
+    int start = 0, end = n - 1;
 
-    while (st < end)
+    while (start < end)
     {
-        swap(arr[st], arr[end]);
-        st++;
+
+        swap(arr[start], arr[end]);
+
+        start++;
         end--;
     }
 
     for (int i = 0; i < n; i++)
     {
-        cout << "reverse array";
-        cout << arr[i] << " " << endl;
+        cout<< arr[i] << " " << endl;
     }
     return 0;
 }

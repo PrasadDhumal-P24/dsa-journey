@@ -8,26 +8,28 @@ using namespace std;
 int main()
 {
 
-    int arr[] = {1, 2, 3, 4, 5};
+    int arr[] = {4, 6, 8, 10, 22};
     int n = 5;
-    int target = 4;
+    int target = 11;
     int start = 0, end = n - 1;
     bool found = false;
 
-    while (start <= end)
+    while (start < end)
     {
 
         int mid = (start + end) / 2;
         if (arr[mid] == target)
         {
             found = true;
-            cout << "element found = " << target << endl;
+            cout << "element found at index " << mid << endl;
             break;
         }
+
         else if (target > arr[mid])
         {
             start = mid + 1;
         }
+
         else
         {
             end = mid - 1;
@@ -35,7 +37,8 @@ int main()
     }
     if (!found)
     {
-        cout << "element not found" << endl;
+        cout << "element not found " << endl;
     }
+
     return 0;
 }
