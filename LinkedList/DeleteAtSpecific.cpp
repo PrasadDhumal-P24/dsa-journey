@@ -20,20 +20,23 @@ int main()
     node *second = new node();
     node *third = new node();
     node *fourth = new node();
+    node *fifth = new node();
 
     first->data = 10;
     second->data = 20;
     third->data = 30;
     fourth->data = 40;
+    fifth->data = 50;
 
     first->next = second;
     second->next = third;
     third->next = fourth;
-    fourth->next = NULL;
+    fourth->next = fifth;
+    fifth->next = NULL;
 
     node *temp = first;
 
-    int position = 2;
+    int position = 4;
 
     for (int i = 1; i < position - 1; i++)
     {

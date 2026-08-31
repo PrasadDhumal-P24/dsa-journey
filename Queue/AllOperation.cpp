@@ -7,48 +7,50 @@ int rear = -1;
 
 void enqueue(int value)
 {
+
     if (rear == 4)
     {
-        cout << "queue is overflow" << endl;
+        cout << "queue is overflow " << endl;
     }
     else
     {
-
         if (front == -1)
         {
             front = 0;
         }
         rear++;
         queue[rear] = value;
-        cout << value << " <- inserted element" << endl;
+        cout << value << " <- insertrd into queue " << endl;
     }
 }
+
 void display()
 {
     if (front == -1)
     {
-        cout << "queue is empty" << endl;
+        cout << "queue is empty " << endl;
     }
     else
     {
-        cout << " queues element :  " << endl;
+        cout << " queue elements" << endl;
         for (int i = front; i <= rear; i++)
         {
-            cout << queue[i] << " ";
+            cout << queue[i];
         }
         cout << endl;
     }
 }
+
 void dequeue()
 {
+
     if (front == rear)
     {
-        cout << "queue is underflow" << endl;
+        cout << "queue is underflow";
     }
     else
     {
-
-        cout << "dequeue element : " << queue[front] << endl;
+        cout << " dequeue elements " << queue[front] << endl;
         front++;
     }
 }
@@ -96,3 +98,8 @@ int main()
 
     return 0;
 }
+
+
+
+
+

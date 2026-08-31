@@ -7,10 +7,12 @@ using namespace std;
 
 class node
 {
+
 public:
     int data;
     node *next;
 };
+
 int main()
 {
 
@@ -42,10 +44,8 @@ int main()
 
     while (temp != NULL)
     {
-
         cout << temp->data << " ";
         temp = temp->next;
     }
-
     return 0;
 }

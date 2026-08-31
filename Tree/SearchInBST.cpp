@@ -61,5 +61,13 @@ int main()
     {
         cout << "element not found" << endl;
     }
+    if (search(root, 90))
+    {
+        cout << "element found" << endl;
+    }
+    else
+    {
+        cout << "element not found" << endl;
+    }
     return 0;
 }

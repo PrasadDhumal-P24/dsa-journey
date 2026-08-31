@@ -2,8 +2,6 @@
 // logic: use a delete variable
 // date: day 9
 
-
-
 #include <iostream>
 using namespace std;
 
@@ -34,7 +32,7 @@ int main()
     first = first->next;
     delete temp;
 
-    node* temp1 = first;
+    node *temp1 = first;
     while (temp1 != NULL)
     {
         cout << temp1->data << " " << endl;

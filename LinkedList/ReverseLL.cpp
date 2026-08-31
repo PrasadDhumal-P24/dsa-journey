@@ -33,17 +33,14 @@ int main()
     node *first = new node();
     node *second = new node();
     node *third = new node();
-    node *fourth = new node();
 
     first->data = 10;
     second->data = 20;
-    third->data = 30;
-    fourth->data = 40;
+    third->data = 40;
 
     first->next = second;
     second->next = third;
-    third->next = fourth;
-    fourth->next = NULL;
+    third->next = NULL;
 
     node *newNode = reverse(first);
 
@@ -55,6 +52,5 @@ int main()
         cout << temp->data << " ";
         temp = temp->next;
     }
-
     return 0;
 }

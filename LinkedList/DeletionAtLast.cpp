@@ -20,22 +20,27 @@ int main()
     node *second = new node();
     node *third = new node();
     node *fourth = new node();
+    node *fifth = new node();
 
     first->data = 10;
     second->data = 20;
     third->data = 30;
     fourth->data = 40;
+    fifth->data = 50;
 
     first->next = second;
     second->next = third;
     third->next = fourth;
-    fourth->next = NULL;
+    fourth->next = fifth;
+    fifth->next = NULL;
 
     node *temp = first;
+
     while (temp->next->next != NULL)
     {
         temp = temp->next;
     }
+
     node *last = temp->next;
     temp->next = NULL;
     delete last;
@@ -50,3 +55,4 @@ int main()
     }
     return 0;
 }
+
