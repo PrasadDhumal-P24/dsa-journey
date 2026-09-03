@@ -4,8 +4,8 @@ using namespace std;
 int main()
 {
 
-    int arr[] = {1, 4, 2, 6, 8, 3, 9};
-    int n = 7;
+    int arr[] = {2, 1, 5, 1, 3, 2};
+    int n = 6;
     int k = 3;
 
     int windowsum = 0;
@@ -20,7 +20,6 @@ int main()
 
     for (int i = k; i < n; i++)
     {
-
         windowsum = windowsum - arr[i - k] + arr[i];
 
         if (windowsum > maxsum)
@@ -29,7 +28,7 @@ int main()
         }
     }
 
-    cout << "maxsum = " << maxsum << endl;
+    cout << "maximum sum = " << maxsum << endl;
 
     return 0;
 }
