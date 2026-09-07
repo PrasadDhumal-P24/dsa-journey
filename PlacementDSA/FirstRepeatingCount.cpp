@@ -5,7 +5,7 @@ using namespace std;
 int main()
 {
 
-    int arr[] = {4, 2, 5, 6, 2, 4, 8};
+    int arr[] = {4, 2, 7, 2, 5, 4, 9};
     int n = 7;
 
     unordered_map<int, int> freq;
@@ -22,10 +22,9 @@ int main()
         if (freq[arr[i]] > 1)
         {
 
-            cout << "frequency count of 1st index = " << freq[arr[i]] << endl;
+            cout << "frequency of 1st element : " << freq[arr[i]] << endl;
             break;
         }
     }
-
     return 0;
 }

@@ -12,7 +12,6 @@ int main()
 
     for (int i = 0; i < k; i++)
     {
-
         windowsum += arr[i];
     }
 
@@ -26,9 +25,8 @@ int main()
         {
             maxsum = windowsum;
         }
+
+        cout << "maximum sum array sum = " << maxsum << endl;
     }
-
-    cout << "maximum sum = " << maxsum << endl;
-
     return 0;
 }

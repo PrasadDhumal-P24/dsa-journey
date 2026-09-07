@@ -4,8 +4,8 @@ using namespace std;
 int main()
 {
 
-    int arr[] = {1, 2, 4, 6, 8, 11};
-    int n = 6;
+    int arr[] = {1, 2, 4, 6, 8, 9, 11};
+    int n = 7;
     int start = 0;
     int end = n - 1;
     int target = 10;
@@ -29,11 +29,9 @@ int main()
             end--;
         }
     }
-
     if (!found)
     {
-        cout << "pair not found ";
+        cout << "element not found " << endl;
     }
-
     return 0;
 }
