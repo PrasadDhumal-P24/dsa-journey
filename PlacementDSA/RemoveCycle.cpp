@@ -86,5 +86,16 @@ int main()
         cout << "starting point not found" << endl;
     }
 
+    removeCycle(first);
+
+    node *temp = first;
+
+    while (temp != NULL)
+    {
+
+        cout << temp->data << " ";
+        temp = temp->next;
+    }
+
     return 0;
 }
