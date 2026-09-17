@@ -7,13 +7,15 @@ struct node
     node *next;
 };
 
-node *cycleStart(node *head)
+node *CycleStart(node *head)
 {
+
     node *slow = head;
     node *fast = head;
 
     while (fast != NULL && fast->next != NULL)
     {
+
         slow = slow->next;
         fast = fast->next->next;
 
@@ -23,11 +25,10 @@ node *cycleStart(node *head)
         }
     }
 
-    if (fast == NULL || fast->next == NULL)
+    while (fast == NULL || fast->next == NULL)
     {
         return NULL;
     }
-
     slow = head;
 
     while (slow != fast)
@@ -35,14 +36,13 @@ node *cycleStart(node *head)
         slow = slow->next;
         fast = fast->next;
     }
-
     return slow;
 }
 
 void removeCycle(node *head)
 {
 
-    node *start = cycleStart(head);
+    node *start = CycleStart(head);
 
     if (start == NULL)
     {
@@ -75,15 +75,15 @@ int main()
 
     fifth->next = third;
 
-    node *answer = cycleStart(first);
+    node *answer = CycleStart(first);
 
     if (answer)
     {
-        cout << "Starting point found cycle = " << answer->data << endl;
+        cout << "Starting point found : " << answer->data << " " << endl;
     }
     else
     {
-        cout << "starting point not found" << endl;
+        cout << "Starting point not found " << endl;
     }
 
     removeCycle(first);
@@ -96,6 +96,107 @@ int main()
         cout << temp->data << " ";
         temp = temp->next;
     }
-
     return 0;
 }
+
+// #include <iostream>
+// using namespace std;
+
+// struct node
+// {
+//     int data;
+//     node *next;
+// };
+
+// node *cycleStart(node *head)
+// {
+//     node *slow = head;
+//     node *fast = head;
+
+//     while (fast != NULL && fast->next != NULL)
+//     {
+//         slow = slow->next;
+//         fast = fast->next->next;
+
+//         if (slow == fast)
+//         {
+//             break;
+//         }
+//     }
+
+//     if (fast == NULL || fast->next == NULL)
+//     {
+//         return NULL;
+//     }
+
+//     slow = head;
+
+//     while (slow != fast)
+//     {
+//         slow = slow->next;
+//         fast = fast->next;
+//     }
+
+//     return slow;
+// }
+
+// void removeCycle(node *head)
+// {
+
+//     node *start = cycleStart(head);
+
+//     if (start == NULL)
+//     {
+//         return;
+//     }
+
+//     node *temp = start;
+
+//     while (temp->next != start)
+//     {
+
+//         temp = temp->next;
+//     }
+//     temp->next = NULL;
+// }
+
+// int main()
+// {
+
+//     node *first = new node{10, NULL};
+//     node *second = new node{20, NULL};
+//     node *third = new node{30, NULL};
+//     node *fourth = new node{40, NULL};
+//     node *fifth = new node{50, NULL};
+
+// first->next = second;
+// second->next = third;
+// third->next = fourth;
+// fourth->next = fifth;
+
+//     fifth->next = third;
+
+//     node *answer = cycleStart(first);
+
+//     if (answer)
+//     {
+//         cout << "Starting point found cycle = " << answer->data << endl;
+//     }
+//     else
+//     {
+//         cout << "starting point not found" << endl;
+//     }
+
+//     removeCycle(first);
+
+//     node *temp = first;
+
+//     while (temp != NULL)
+//     {
+
+//         cout << temp->data << " ";
+//         temp = temp->next;
+//     }
+
+//     return 0;
+// }
