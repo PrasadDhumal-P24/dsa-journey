@@ -9,23 +9,24 @@ bool isBalanced(string str)
 
     for (int i = 0; i < str.length(); i++)
     {
+
         char ch = str[i];
 
         if (ch == '(' || ch == '{' || ch == '[')
         {
             s.push(ch);
         }
-        else
+        else if (ch == ')' || ch == '}' || ch == ']')
         {
-
             if (s.empty())
             {
                 return false;
             }
 
             char top = s.top();
-
-            if (ch == ')' || ch == '}' || ch == ']')
+            if ((ch == ')' && top == '(') ||
+                (ch == '}' && top == '{') ||
+                (ch == ']' && top == '['))
             {
                 s.pop();
             }
@@ -38,19 +39,18 @@ bool isBalanced(string str)
 
     return s.empty();
 }
-
 int main()
 {
 
-    string str = "[{))}]";
+    string str = "a+(b*c)-{d/e}";
 
-    if (isBalanced(str))
+    if (isBalanced)
     {
-        cout << "stack is balanced" << endl;
+        cout << "balanced";
     }
     else
     {
-        cout << "stack are not balanced" << endl;
+        cout << "not balanced";
     }
     return 0;
 }
