@@ -13,9 +13,9 @@ void NextGreater(int arr[], int n)
 
         while (!s.empty() && s.top() <= arr[i])
         {
-
             s.pop();
         }
+
         if (s.empty())
         {
             answer[i] = -1;
@@ -24,19 +24,18 @@ void NextGreater(int arr[], int n)
         {
             answer[i] = s.top();
         }
-
         s.push(arr[i]);
     }
-
     for (int i = 0; i < n; i++)
     {
         cout << answer[i] << " ";
     }
 }
+
 int main()
 {
 
-    int arr[] = {4, 5, 2, 10, 8};
+    int arr[] = {6, 8, 0, 1, 3};
     int n = 5;
 
     NextGreater(arr, n);
