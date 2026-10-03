@@ -3,11 +3,12 @@ using namespace std;
 
 struct node
 {
+
     int data;
     node *next;
 };
 
-bool hasCycle(node *head)
+bool hascycle(node *head)
 {
 
     node *slow = head;
@@ -43,16 +44,15 @@ int main()
 
     fifth->next = third;
 
-    bool answer = hasCycle(first);
+    int answer = hascycle(first);
 
-    if (hasCycle)
+    if (hascycle)
     {
-
-        cout << "cycle found " << endl;
+        cout << "cycle found" << endl;
     }
     else
     {
-        cout << "cycle not found " << endl;
+        cout << "cycle not found" << endl;
     }
     return 0;
 }

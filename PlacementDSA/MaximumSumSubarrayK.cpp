@@ -4,7 +4,7 @@ using namespace std;
 int main()
 {
 
-    int arr[] = {2, 1, 9, 1, 4, 2};
+    int arr[] = {2, 1, 5, 1, 3, 2};
     int n = 6;
     int k = 3;
 
@@ -19,15 +19,15 @@ int main()
 
     for (int i = k; i < n; i++)
     {
+
         windowsum = windowsum - arr[i - k] - arr[i];
 
         if (windowsum > maxsum)
         {
-
             maxsum = windowsum;
         }
     }
 
-    cout << "Contignous total maxsum is : " << maxsum;
+    cout << "max subarray sum is : " << maxsum;
     return 0;
 }
