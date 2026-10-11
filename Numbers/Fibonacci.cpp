@@ -19,7 +19,6 @@ int main()
             cout << a << " ";
             continue;
         }
-
         else if (i == 2)
         {
             cout << b << " ";
@@ -27,7 +26,6 @@ int main()
         }
         else
         {
-
             int c = a + b;
             a = b;
             b = c;
