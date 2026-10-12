@@ -7,28 +7,29 @@ using namespace std;
 
 int main()
 {
-    string s = "prasad";
-    int st = 0, end = s.length() - 1;
+
+    string s = "drasad";
+    int start = 0;
+    int end = s.length() - 1;
 
     bool palindrome = true;
 
-    while (st < end)
+    for (int i = 0; i < s.length(); i++)
     {
-        if (s[st] != s[end])
+
+        if (s[start] != s[end])
         {
             palindrome = false;
             break;
         }
-        st++;
-        end--;
     }
     if (palindrome)
     {
-        cout << "palindrome";
+        cout << "Palindrome";
     }
     else
     {
-        cout << "not palindrome";
+        cout << "Not palindrome";
     }
     return 0;
 }
