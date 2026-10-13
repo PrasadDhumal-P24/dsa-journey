@@ -3,7 +3,6 @@ using namespace std;
 
 class node
 {
-
 public:
     int data;
     node *left;
@@ -18,7 +17,7 @@ public:
     }
 };
 
-bool search(node *root, int target)
+bool BSTsearch(node *root, int target)
 {
 
     if (root == NULL)
@@ -31,12 +30,11 @@ bool search(node *root, int target)
     }
     if (root->data > target)
     {
-
-        return search(root->left, target);
+        return BSTsearch(root->left, target);
     }
     if (root->data < target)
     {
-        return search(root->right, target);
+        return BSTsearch(root->right, target);
     }
 }
 
@@ -53,21 +51,22 @@ int main()
     root->right->left = new node(60);
     root->left->right = new node(80);
 
-    if (search(root, 30))
+    if (BSTsearch(root, 30))
     {
-        cout << "element found" << endl;
+
+        cout << "Element found at tree" << endl;
     }
     else
     {
-        cout << "element not found" << endl;
+        cout << "Element not found at tree" << endl;
     }
-    if (search(root, 90))
+    if (BSTsearch(root, 90))
     {
-        cout << "element found" << endl;
+        cout << "Element found at tree";
     }
     else
     {
-        cout << "element not found" << endl;
+        cout << "Element not found at tree";
     }
     return 0;
 }
