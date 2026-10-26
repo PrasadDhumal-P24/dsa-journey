@@ -8,22 +8,25 @@ using namespace std;
 int main()
 {
 
-    int arr[] = {1, 0, 33, 0, 77, 88, 0};
-    int n = 7;
-    int j = 0;
+    int arr[] = {0, 1, 3, 0, 12};
+    int n = 5;
+
+    int x = 0;
 
     for (int i = 0; i < n; i++)
     {
 
         if (arr[i] != 0)
         {
-            swap(arr[i], arr[j]);
-            j++;
+            swap(arr[i], arr[x]);
+            x++;
         }
     }
-    for (int j = 0; j < n; j++)
+    cout << "This is a array of all zeros to end after moving : ";
+    for (int i = 0; i < n; i++)
     {
-        cout << arr[j] << " " << endl;
+        cout << arr[i] << " ";
     }
+    cout << endl;
     return 0;
 }
