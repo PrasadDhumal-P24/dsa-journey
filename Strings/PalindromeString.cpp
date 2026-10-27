@@ -5,31 +5,33 @@
 #include <iostream>
 using namespace std;
 
-int main()
+bool isPalindrome(string s)
 {
 
-    string s = "drasad";
     int start = 0;
     int end = s.length() - 1;
 
-    bool palindrome = true;
-
-    for (int i = 0; i < s.length(); i++)
+    while (start < end)
     {
-
         if (s[start] != s[end])
         {
-            palindrome = false;
-            break;
+            return false;
         }
+        start++;
+        end--;
     }
-    if (palindrome)
+    return true;
+}
+int main()
+{
+    string s = "om";
+    if (isPalindrome(s))
     {
-        cout << "Palindrome";
+        cout << "Pallindrome";
     }
     else
     {
-        cout << "Not palindrome";
+        cout << "NOt Pallindrome";
     }
     return 0;
 }
