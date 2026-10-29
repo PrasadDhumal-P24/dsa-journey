@@ -8,8 +8,8 @@ using namespace std;
 int main()
 {
 
-    int arr[] = {0, 1, 3, 0, 12};
-    int n = 5;
+    int arr[] = {0,0,0,1,2,66,0};
+    int n = 7;
 
     int x = 0;
 

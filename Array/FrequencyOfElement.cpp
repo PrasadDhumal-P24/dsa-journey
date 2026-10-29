@@ -7,35 +7,43 @@ using namespace std;
 
 int main()
 {
-    int arr[] = {2, 2, 3, 4, 5, 5, 6, 1, 2};
-    int n = 9;
+
+    int arr[] = {1, 2, 2, 3, 2, 1};
+    int n = 6;
 
     for (int i = 0; i < n; i++)
     {
-        int count = 1;
-        bool alreadycounted = false;
 
-        for (int k = 0; k < i; k++)
+        int count = 1;
+        bool isalreadycount = false;
+
+        for (int j = 0; j < i; j++)
         {
-            if (arr[i] == arr[k])
+
+            if (arr[i] == arr[j])
             {
-                alreadycounted = true;
+                isalreadycount = true;
                 break;
             }
         }
-        if (alreadycounted)
+
+        if (isalreadycount)
+        {
 
             continue;
+        }
 
-        for (int j = i + 1; j < n; j++)
+        for (int k = i + 1; k < n; k++)
         {
-            if (arr[i] == arr[j])
+
+            if (arr[i] == arr[k])
             {
+
                 count++;
             }
         }
-        cout << arr[i] << "->" << count << "times" << endl;
-    }
 
+        cout << arr[i] << " -> " << count << " times" << endl;
+    }
     return 0;
 }
