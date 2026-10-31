@@ -5,8 +5,8 @@ using namespace std;
 int main()
 {
 
-    int arr[] = {4, 2, 7, 2, 5, 4, 9};
-    int n = 7;
+    int arr[] = {6, 1, 6, 6, 1, 4};
+    int n = 6;
 
     unordered_map<int, int> freq;
 
@@ -16,11 +16,10 @@ int main()
         freq[arr[i]]++;
     }
 
-    cout << "frequency count of 4 = " << freq[4] << endl;
-    cout << "frequency count of 2 = " << freq[2] << endl;
-    cout << "frequency count of 7 = " << freq[7] << endl;
-    cout << "frequency count of 5 = " << freq[5] << endl;
-    cout << "frequency count of 9 = " << freq[9] << endl;
+    for (auto p : freq)
+    {
 
+        cout << "frequency count of this element = " << p.first << " = " << p.second << endl;
+    }
     return 0;
 }

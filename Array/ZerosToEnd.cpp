@@ -8,8 +8,8 @@ using namespace std;
 int main()
 {
 
-    int arr[] = {0,0,0,1,2,66,0};
-    int n = 7;
+    int arr[] = {0, 3, 0, 5, 0, 8};
+    int n = 6;
 
     int x = 0;
 
@@ -22,10 +22,10 @@ int main()
             x++;
         }
     }
-    cout << "This is a array of all zeros to end after moving : ";
+    cout << "This is a array after moving all zeros to end : ";
     for (int i = 0; i < n; i++)
     {
-        cout << arr[i] << " ";
+        cout << arr[i]<<" ";
     }
     cout << endl;
     return 0;

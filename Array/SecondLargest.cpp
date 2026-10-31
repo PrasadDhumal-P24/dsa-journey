@@ -5,8 +5,8 @@ using namespace std;
 int main()
 {
 
-    int arr[] = {-2,-4,-1,0};
-    int n = 4;
+    int arr[] = {5, 5, 5, 5};
+    int n = 5;
 
     int largest = arr[0];
     int secondlargest = INT_MIN;
@@ -25,13 +25,13 @@ int main()
         }
     }
 
-    if (secondlargest)
+    if (secondlargest != INT_MIN)
     {
-        cout << "second largest is : " << secondlargest << endl;
+        cout << " this is the secondlargest element in array : " << secondlargest << endl;
     }
     else
     {
-        cout << "second largest not found : " << INT_MIN << endl;
+        cout << -1 << endl;
     }
     return 0;
 }
