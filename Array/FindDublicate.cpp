@@ -1,24 +1,36 @@
 // problem: find dublicate element in array
-// logic: brute force approch
+// logic: using hashmap
 // date: day 6
 
 #include <iostream>
+#include <unordered_map>
 using namespace std;
 
 int main()
 {
-    int arr[] = {3, 4, 6, 6, 8};
-    int n = 5;
-    for (int i = 0; i < 5; i++)
+
+    int arr[] = {3, 1, 4, 1, 5, 3, 3};
+    int n = 7;
+
+    unordered_map<int, int> same;
+
+    for (int i = 0; i < n; i++)
     {
-        for (int j = i + 1; j < 5; j++)
+
+        same[arr[i]]++;
+    }
+
+    cout << "this is dublicate elements in array : " << endl;
+
+    for (auto p : same)
+    {
+
+        if (p.second > 1)
         {
-            if (arr[i] == arr[j])
-            {
-                cout << "dublicate = " << arr[i] << endl;
-                break;
-            }
+            cout << p.first << " " << endl;
+            ;
         }
     }
+
     return 0;
 }
