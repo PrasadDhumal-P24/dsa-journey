@@ -28,7 +28,7 @@ int main()
         if (p.second > 1)
         {
             cout << p.first << " " << endl;
-            ;
+
         }
     }
 

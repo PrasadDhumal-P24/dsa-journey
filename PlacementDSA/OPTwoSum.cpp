@@ -4,38 +4,31 @@ using namespace std;
 int main()
 {
 
-    int arr[] = {1, 2, 4, 6, 8, 11};
-    int n = 6;
-    int target = 10;
-    int start = 0;
-    int end = n - 1;
+    int arr[] = {1, 2, 3, 4};
+    int n = 4;
+    int target = 55;
     bool found = false;
 
-    while (start <= end)
+    for (int i = 0; i < n; i++)
     {
+        for (int j = i + 1; j < n; j++)
+        {
 
-        if (arr[start] + arr[end] == target)
-        {
-            found = true;
-            cout << arr[start] << " + " << arr[end] << " = " << target << endl;
-            break;
+            if (arr[i] + arr[j] == target)
+            {
+
+                cout << i << " + " << j << " = " << target << endl;
+            }
         }
-        else if (arr[start] + arr[end] < target)
-        {
-            start++;
-        }
-        else
-        {
-            end--;
-        }
+
+        found = true;
+        break;
     }
+
     if (!found)
     {
-        cout << "sum not found" << endl;
+        cout << "target not found!";
     }
-    else
-    {
-        cout << "sum found successfully" << endl;
-    }
+
     return 0;
 }

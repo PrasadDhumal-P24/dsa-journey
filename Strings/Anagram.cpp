@@ -5,38 +5,40 @@ using namespace std;
 int main()
 {
 
-    string s1 = "tea";
-    string s2 = "eet";
+    string s1 = "binary";
+    string s2 = "brainy";
 
-    bool anagram = true;
+    bool isAnagram = true;
 
-    unordered_map<char, int> count;
+    unordered_map<char, int> same;
 
     for (int i = 0; i < s1.length(); i++)
     {
-        count[s1[i]]++;
+        same[s1[i]]++;
     }
     for (int i = 0; i < s2.length(); i++)
     {
-        count[s2[i]]--;
+        same[s2[i]]--;
     }
-
-    for (auto p : count)
+    for (auto p : same)
     {
-
         if (p.second != 0)
         {
-            anagram = false;
+            isAnagram = false;
+            break;
         }
     }
 
-    if (anagram)
+    if (isAnagram)
     {
-        cout << "anagram" << endl;
+        cout << "Anagram" << endl;
     }
     else
     {
-        cout << "not anagram" << endl;
+        cout << "Not Anagram" << endl
+             << -1;
     }
     return 0;
 }
+
+
